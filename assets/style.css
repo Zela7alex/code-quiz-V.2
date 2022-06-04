@@ -1,27 +1,28 @@
 * {
     box-sizing: border-box;
 }
+
 :root {
     --primary: white;
     --secondary: rgb(0, 247, 95);
-    --tertiary: rgb(0, 0, 0); 
+    --tertiary: rgb(0, 0, 0);
     font-size: 1.5em;
 }
 
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     background-color: var(--tertiary);
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
     z-index: -1;
  
-    
 }
 
 /** Home Page */
@@ -32,36 +33,40 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: rgba(0,0,0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 2em;
     border-radius: 0.5em;
     width: 50vw;
     position: fixed;
-    top: 25%;  
+    top: 25%;
 }
 
 .myVideo {
-   width: 100vw;
-   height: 100vh;
-   object-fit: cover;
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
+
 h1 {
     font-size: 3rem;
     text-shadow: 2px 5px 2px rgb(40, 255, 80);
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 p {
     font-size: 1.5rem;
     color: var(--primary);
     text-shadow: 2px 5px 6px rgb(47, 46, 46);
 }
- button, .home-btns {
+
+button,
+.home-btns {
     cursor: pointer;
     outline: none;
     border: none;
@@ -74,14 +79,17 @@ p {
     color: var(--tertiary);
     background-color: var(--secondary);
     text-shadow: 1px 3px 1px rgb(255, 255, 255);
-     
+
 }
+
 a {
     text-decoration: none;
 }
-button,  .home-btns:hover {
+
+button,
+.home-btns:hover {
     background-color: var(--tertiary);
-    
+
 }
 
 
@@ -90,28 +98,71 @@ button,  .home-btns:hover {
 h2 {
     color: white;
 }
- li {
+
+.quiz-list {
     color: white;
-    list-style-type:upper-alpha;
+    list-style-type: upper-alpha;
     border: 1px solid green;
     margin: 0.8em;
     cursor: pointer;
 }
+
 li:hover {
-    opacity: 0.7
+    opacity: 0.7;
 }
+
 .green-background {
     background-color: var(--secondary);
 }
+
 .red-background {
     background-color: red;
 }
+
 #quiz {
+    width: 80%;
+    word-wrap: break-word;
+}
+
+/** Highscores Page */
+#home-screen-btn {
+    margin-top: 5em;
+    border: 2px solid var(--secondary);
+}
+
+#high-scores-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scores-div {
     width: 80%;
     word-wrap: break-word;
 
 }
-#time-box, #time {
+
+#high-scores-input {
+    background-color: var(--secondary);
+}
+
+#high-scores-h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px rgb(40, 255, 80);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#high-scores-p {
+    font-size: 0.8em;
+}
+
+
+
+
+
+#time-box,
+#time {
     position: fixed;
     top: 10%;
     left: 45%;
@@ -121,25 +172,28 @@ li:hover {
     font-size: 1.5em;
     opacity: 90%;
 }
+
 #next {
-   margin-left: 80%;
-   border: 1px solid white;
-   width: 20%;
-   padding: 0.5em;
+    margin-left: 80%;
+    border: 1px solid white;
+    width: 20%;
+    padding: 0.5em;
 }
 
 /** Mobile Optimization */
-@media(max-width:1280px){
+@media(max-width:1280px) {
     main {
         width: 88vw;
         height: 80vh;
         position: fixed;
         top: 6%;
         padding-bottom: 5em;
-        
-        
+
+
     }
-    #time-box, #time {
+
+    #time-box,
+    #time {
         position: fixed;
         top: 5%;
         left: 45%;
@@ -157,7 +211,9 @@ li:hover {
         position: fixed;
         top: 40%;
     }
-    #time-box, #time {
+
+    #time-box,
+    #time {
         position: fixed;
         top: 10%;
         left: 85%;
@@ -169,39 +225,43 @@ li:hover {
     }
 }
 
-@media(max-width:550px){
+@media(max-width:550px) {
     main {
         width: 88vw;
         height: 90vh;
         position: fixed;
         top: 5%;
-        padding-bottom: 5em;  
+        padding-bottom: 5em;
     }
-    #quiz{
+
+    #quiz {
         width: 80%;
         height: 90vh;
         margin-top: 6vh;
-        padding-bottom: 5em; 
+        padding-bottom: 5em;
     }
-    #time-box, #time{
+
+    #time-box,
+    #time {
         position: fixed;
         top: 3%;
         left: 72%;
     }
-    #next{
+
+    #next {
         width: 50%;
         margin-top: 100px;
         margin-left: 28%;
     }
 }
 
-
-@media(max-width:360px){
+@media(max-width:360px) {
     main {
         height: 90vh;
         padding-bottom: 7em;
         padding-top: 4em;
     }
+
     h1 {
         font-size: 1.5em;
     }

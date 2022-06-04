@@ -9,11 +9,19 @@ const timer = document.querySelector('#time')
 let i = 0;
 let score = 0
 let time = 60
+let scoresList = []
 
 
 const questions = [{
-    question: ''
-},
+    question: "Inside which HTML element do we put the Javascript?",
+    theChoices: {
+        choice1: "<script>",
+        choice2: "<javascript>",
+        choice3: "<js>",
+        choice4: "<scripting>"
+    },
+    rightChoice: '<script>'
+}, 
 {
     question: "Inside which HTML element do we put the Javascript?",
     theChoices: {
@@ -84,8 +92,7 @@ const questions = [{
         choice4: "indexOf()",
     },
     rightChoice: 'charAt()'
-}
-];
+}];
 
 //** FUNCTION - Timer: goes down every second */
 
@@ -125,6 +132,8 @@ const renderQuestions = () => {
 
     
     correctChoice(choiceA,choiceB,choiceC,choiceD,rightAnswer)
+
+    
 
     // Removing background colors for right and wrong answers from correctChoice()
     choice1.classList.remove('green-background')
@@ -188,14 +197,21 @@ const correctChoice = (choiceA,choiceB,choiceC,choiceD,rightAnswer) => {
         setTimeout(renderQuestions, 1000)  
     }
      
-   }  
-}
+ }
+ return score
+
+}   
 
 
 //** FUNCTION - redirects to highscores page */
-const renderHighScores = () => {
+const renderHighScores = () => {    
     location.href = 'highscores.html'
 }
+
+// //** FUNCTION - saves scores to local storage */
+// const saveScores = () => {
+//     localStorage.setItem("scores", JSON.stringify(scoresList))
+// }
 
 
 nextBtn.addEventListener("click", renderQuestions)
