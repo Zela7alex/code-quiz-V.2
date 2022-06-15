@@ -11,3 +11,8 @@ This is a simple quiz application that can be played by developers of all skill 
  - The UI shows a set of questions and lets the user select an answer. 
  - If the user chooses correctly, their answer will show green. Otherwise it will show red. 
 - The users overall score will accumulate and show on the high scores page. They may then enter their name to save their high score.
+
+
+
+https://user-images.githubusercontent.com/93490778/173959871-640101b0-eb71-4995-9825-39dedb2e35e5.mp4
+
