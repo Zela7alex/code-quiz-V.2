@@ -286,6 +286,14 @@ li:hover {
         margin-top: 100px;
         margin-left: 28%;
     }
+
+    #high-scores-h1 {
+        font-size: 1.5em;
+    }
+
+    #home-screen-btn {
+        margin-top: 10%;
+    }
 }
 
 @media(max-width:360px) {
@@ -297,5 +305,15 @@ li:hover {
 
     h1 {
         font-size: 1.5em;
+    }
+
+    #high-scores-h1 {
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+
+    #home-screen-btn {
+        margin-top: 5%;
+        padding: 0.5em;
     }
 }
